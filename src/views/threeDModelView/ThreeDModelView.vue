@@ -21,7 +21,6 @@ onMounted(() => {
   if (!canvas) return
   sizes.value.width = canvas.clientWidth
   sizes.value.height = canvas.clientHeight
-  const aspect = sizes.value.width / sizes.value.height
   const scene = new THREE.Scene();
   scene.background = new THREE.Color(0x1c1c20);
 
