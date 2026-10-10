@@ -1,5 +1,5 @@
 import type { Component } from 'vue'
-import { Box, MapLocation, Odometer, User } from '@element-plus/icons-vue'
+import { Box, MapLocation } from '@element-plus/icons-vue'
 
 export interface AppMenuItem {
   path: string
