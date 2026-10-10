@@ -9,7 +9,7 @@ import * as THREE from 'three';
 // 引入扩展库OrbitControls.js
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 // 引入扩展库GLTFLoader.js
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+// import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { ref, onMounted } from 'vue';
 const canvasRef = ref<HTMLCanvasElement | null>(null)
 const sizes = ref({
