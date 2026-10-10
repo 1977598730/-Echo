@@ -47,7 +47,7 @@ async function onSubmit() {
     await userStore.login(form.username.trim(), form.password)
     ElMessage.success('登录成功')
     const redirect =
-      typeof route.query.redirect === 'string' ? route.query.redirect : '/dashboard'
+      typeof route.query.redirect === 'string' ? route.query.redirect : '/threeDModelView'
     await router.replace(redirect)
   } catch (error) {
     const message = error instanceof Error ? error.message : '登录失败'
@@ -77,34 +77,18 @@ async function onSubmit() {
       <form class="login-form" @submit.prevent="onSubmit">
         <div class="field" :class="{ invalid: usernameError }">
           <label for="username">用户名</label>
-          <input
-            id="username"
-            v-model="form.username"
-            type="text"
-            name="username"
-            autocomplete="username"
-            placeholder="请输入用户名"
-          />
+          <input id="username" v-model="form.username" type="text" name="username" autocomplete="username"
+            placeholder="请输入用户名" />
           <span v-if="usernameError" class="error">{{ usernameError }}</span>
         </div>
 
         <div class="field" :class="{ invalid: passwordError }">
           <label for="password">密码</label>
           <div class="password-wrap">
-            <input
-              id="password"
-              v-model="form.password"
-              :type="showPassword ? 'text' : 'password'"
-              name="password"
-              autocomplete="current-password"
-              placeholder="请输入密码"
-            />
-            <button
-              type="button"
-              class="toggle-pwd"
-              :aria-label="showPassword ? '隐藏密码' : '显示密码'"
-              @click="showPassword = !showPassword"
-            >
+            <input id="password" v-model="form.password" :type="showPassword ? 'text' : 'password'" name="password"
+              autocomplete="current-password" placeholder="请输入密码" />
+            <button type="button" class="toggle-pwd" :aria-label="showPassword ? '隐藏密码' : '显示密码'"
+              @click="showPassword = !showPassword">
               {{ showPassword ? '隐藏' : '显示' }}
             </button>
           </div>
@@ -189,6 +173,7 @@ async function onSubmit() {
   from {
     transform: translate(0, 0) scale(1);
   }
+
   to {
     transform: translate(-30px, 24px) scale(1.08);
   }

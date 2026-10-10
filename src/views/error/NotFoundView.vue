@@ -8,8 +8,8 @@ const router = useRouter()
   <div class="not-found">
     <h1>404</h1>
     <p>页面不存在</p>
-    <el-button type="primary" @click="router.push('/dashboard')">
-      返回工作台
+    <el-button type="primary" @click="router.push('/threeDModelView')">
+      返回3D模型可视化
     </el-button>
   </div>
 </template>

@@ -14,7 +14,7 @@ router.beforeEach((to) => {
 
   if (to.meta.public) {
     if (userStore.isLoggedIn && to.name === 'Login') {
-      return { path: '/dashboard' }
+      return { path: '/threeDModelView' }
     }
     return true
   }

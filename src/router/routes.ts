@@ -10,14 +10,8 @@ export const routes: RouteRecordRaw[] = [
   {
     path: '/',
     component: () => import('../layouts/AdminLayout.vue'),
-    redirect: '/dashboard',
+    redirect: '/threeDModelView',
     children: [
-      {
-        path: 'dashboard',
-        name: 'Dashboard',
-        component: () => import('../views/dashboard/DashboardView.vue'),
-        meta: { title: '工作台' },
-      },
       {
         path: 'mapView',
         name: 'MapView',
@@ -29,13 +23,7 @@ export const routes: RouteRecordRaw[] = [
         name: 'ThreeDModelView',
         component: () => import('../views/threeDModelView/ThreeDModelView.vue'),
         meta: { title: '3D模型可视化' },
-      },
-      {
-        path: 'system/user',
-        name: 'SystemUser',
-        component: () => import('../views/system/UserView.vue'),
-        meta: { title: '用户管理' },
-      },
+      }
     ],
   },
   {
