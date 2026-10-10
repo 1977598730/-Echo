@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "mastergo": {
+      "command": "npx",
+      "args": ["-y", "@mastergo/vibe-mcp@latest", "--url=http://localhost:30678"]
+    },
+    "mastergo-magic-mcp": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@mastergo/magic-mcp",
+        "--token=mg_c805f939159540ef9b5ff376ba0b53d7",
+        "--url=https://mastergo.com"
+      ]
+    }
+  }
+}
